@@ -8,9 +8,7 @@ network:
       dhcp4: no
   bonds:
     bond007:
-      interfaces:
-        - enp0s3
-        - enp0s8
+      interfaces: [enp0s3, enp0s8]
       parameters:
         mode: balance-rr
       dhcp4: yes
