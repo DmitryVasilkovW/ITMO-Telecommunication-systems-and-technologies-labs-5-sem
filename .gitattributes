@@ -1,2 +1,3 @@
-*.conf.options linguist-language=conf
-*.conf.local linguist-language=conf
+*.options linguist-language=zone
+*.local linguist-language=zone
+*.db linguist-language=zone
