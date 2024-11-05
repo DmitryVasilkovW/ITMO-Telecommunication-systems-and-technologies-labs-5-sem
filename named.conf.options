@@ -1,0 +1,21 @@
+options {
+        // Addresses and ports on which the DNS server will listen for requests
+        listen-on port 53 { 10.0.0.1; }; // Only on the internal IP address of c7-1
+        listen-on-v6 { none; }; // Disable IPv6
+
+        // Allow DNS queries only from the specified subnet and localhost
+        allow-query { localhost; 10.0.0.0/24; };
+
+        // Enable recursion so the server can perform requests for the host c7-2
+        recursion yes;
+
+        // Set cache TTL for requests
+        max-cache-ttl 86400; // Maximum caching time - 1 day
+        max-ncache-ttl 3600; // Maximum negative caching time - 1 hour
+
+        // Enable security settings
+        dnssec-validation auto; // Enable DNSSEC for auth checks
+
+        // Replace server version inforamtion
+        version "My Own DNS Server";
+};
