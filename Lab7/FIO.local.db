@@ -1,0 +1,19 @@
+$TTL 300 ; Default Time-To-Live for all records in this zone (300 seconds)
+  
+@         IN SOA ns1.FIO.local. hostmaster.FIO.local. (
+                  2024110101 ; Serial (format: YYYYMMDDnn, when nn is an incremental number for updates)
+                  43200      ; Refresh interval (in seconds)
+                  3600       ; Retry interval (in seconds)
+                  3600000    ; Expiry time (in seconds)
+                  300        ; Minimum TTL (in seconds)
+          )
+  
+; Define the primary name server for the zone
+@       IN NS   ns1.FIO.local.
+  
+; Define IP addresses for key hosts in the zone
+nS1 IN A        10.0.0.1   ; ns1 host IP (Primary DNS server)
+gate IN A       10.0.0.1   ; gate host IP
+
+; Create a CNAME for www that points to the gate host
+www IN CNAME gatel
