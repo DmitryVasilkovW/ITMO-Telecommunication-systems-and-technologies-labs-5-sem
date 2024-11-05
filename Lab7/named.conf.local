@@ -1,0 +1,6 @@
+zone "FIO. local" {
+          type master; // Designates this server as the primary (master) server for the zone
+          file */var/lib/bind/FIO.local.db"; // The path to the zone file, which will store domain records
+          allow-update ( any; };  // Allows dynamic updates (use with caution in a production environment)
+          allow-transfer { none; }: // Disable zone transfers for additional security
+};
