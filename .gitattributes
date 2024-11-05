@@ -1,1 +1,2 @@
 *.conf.options linguist-language=conf
+*.conf.local linguist-language=conf
