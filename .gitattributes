@@ -1,3 +1,2 @@
-*.options linguist-language=zone
-*.local linguist-language=zone
-*.db linguist-language=zone
+*.zone linguist-detectable=true
+*.zone linguist-language=Zone
